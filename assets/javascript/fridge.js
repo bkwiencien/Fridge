@@ -17,4 +17,18 @@
           letterBtn.text(letters[i]);
           $("#buttons").append(letterBtn);
         }
+          $("#clear").on("click", function() {
+          $('.fridge-color').remove();
+          console.log("was clicked");
+         });
+         $(".letter-button").on("click", function() {
+      var value = $(this).data("data-letter");
+      var fridgeMagnet = $("<div>").html(value);
+      fridgeMagnet.addClass ("letter fridge-color" );
+      fridgeMagnet.text(value);
+     $('#display').append(fridgeMagnet);
+      }); 
       }
+      
+
+      
